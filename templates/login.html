@@ -8,7 +8,12 @@
   <style>
 
     body {
-        margin: 10%;
+      margin: 10%;
+    }
+
+    .success_div {
+      width: 50%;
+      margin-left: 25%;
     }
   </style>
 </head>
@@ -18,7 +23,7 @@
   {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
     {% for category, message in messages %}
-      <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+      <div class="alert alert-{{ category }} alert-dismissible fade show success_div" role="alert">
         {{ message }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
